@@ -5,8 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c7dcac8717.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
+  <body class="flex col align-center justify-center pad-40">
+    <header class="flex col align-center justify-center margin-40">
+      <h1>Calculator.App</h1>
+      <p>FSDI 103 - Assignment 3</p>
+      <p><i>Romnick Sarmiento</i></p>
+    </header>
+
+    <main class="flex row pad-20">
+      <div class="calculator-main flex col align-center">
+        <div class="display-container flex align margin-20 pad-20">
+          <h3 id="display-main">0</h3>
+        </div>
+
+        <div class="button-container col align-center justify-center">
+          <div class="buttonset flex row align-center">
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">X</button>
+          </div>
+
+          <div class="buttonset flex row align-center">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">/</button>
+          </div>
+
+          <div class="buttonset flex row align-center">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">+</button>
+          </div>
+
+          <div class="buttonset flex row align-center">
+            <button class="button">C</button>
+            <button class="button">0</button>
+            <button class="button">=</button>
+            <button class="button">-</button>
+          </div>
+        </div>
+      </div>
+      <div class="calculator-log">
+        <ul id="result-log" class="margin-20 flex">
+          <li>11231 + 334234543 = 11111</li>
+        </ul>
+      </div>
+      <script
+        src="https://kit.fontawesome.com/c7dcac8717.js"
+        crossorigin="anonymous"
+      ></script>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
