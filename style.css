@@ -55,6 +55,29 @@ main {
   background-color: #898989;
 }
 
+hr {
+  width: 80%;
+  height: 2px;
+  background-color: #3a3042;
+}
+
+#assignment-button {
+  padding: 10px;
+  margin: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 3px solid #3a3042;
+}
+
+#assignment-list {
+  align-items: start;
+}
+
+#assignment-list li {
+  margin: 10px 40px;
+}
+
 button.button {
   height: 100px;
   width: 100px;
@@ -112,4 +135,4 @@ li {
   font-size: 1.5rem;
   margin: 10px 0px;
   text-align: right;
-}/*# sourceMappingURL=style.css.map */
+}

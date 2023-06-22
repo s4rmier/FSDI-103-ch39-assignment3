@@ -11,16 +11,30 @@
     ></script>
   </head>
   <body class="flex col align-center justify-center pad-40">
+    <section class="flex col align-center justify-center margin-40">
+      <h1>Assingment Requirement</h1>
+      <p>FSDI 103 - Assignment 3</p>
+      <button id="assignment-button" onclick="getUserInput()">Calculate</button>
+      <ul id="assignment-list" class="flex col">
+        <li>Product : <span id="product"></span></li>
+        <li>Quotient : <span id="quotient"></span></li>
+        <li>Sum : <span id="sum"></span></li>
+        <li>Difference : <span id="difference"></span></li>
+        <li></li>
+      </ul>
+    </section>
+
+    <hr />
+
     <header class="flex col align-center justify-center margin-40">
       <h1>Calculator.App</h1>
-      <p>FSDI 103 - Assignment 3</p>
       <p><i>Romnick Sarmiento</i></p>
     </header>
 
     <main class="flex row pad-20">
       <div class="calculator-main flex col align-center">
         <div class="display-container flex align margin-20 pad-20">
-          <h3 id="display-main">0</h3>
+          <h3 id="display-main"></h3>
         </div>
 
         <div class="button-container col align-center justify-center">
