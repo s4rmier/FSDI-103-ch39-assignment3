@@ -5,10 +5,10 @@ const getUserInput = () => {
   const secondNumber = Number(validateUserInput(`num2`));
 
   // step2: perform operations
-  console.log(add(firstNumber, secondNumber).toFixed(2));
-  console.log(subtract(firstNumber, secondNumber).toFixed(2));
-  console.log(multiply(firstNumber, secondNumber).toFixed(2));
-  console.log(divide(firstNumber, secondNumber).toFixed(2));
+  add(firstNumber, secondNumber);
+  subtract(firstNumber, secondNumber);
+  multiply(firstNumber, secondNumber);
+  divide(firstNumber, secondNumber);
 
   // step3: send results to the DOM
   updateDOM();
@@ -60,10 +60,10 @@ let validateUserInput = (input) => {
 // update DOM for results
 
 const updateDOM = () => {
-  document.getElementById("product").textContent = product;
-  document.getElementById("quotient").textContent = quotient;
-  document.getElementById("sum").textContent = sum;
-  document.getElementById("difference").textContent = difference;
+  document.getElementById("product").textContent = product.toFixed(2);
+  document.getElementById("quotient").textContent = quotient.toFixed(2);
+  document.getElementById("sum").textContent = sum.toFixed(2);
+  document.getElementById("difference").textContent = difference.toFixed(2);
 };
 
 // =================================================================================
