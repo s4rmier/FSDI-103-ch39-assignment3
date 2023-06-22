@@ -95,6 +95,7 @@ button:hover {
 
 div.display-container {
   width: 80%;
+  height: clamp(40px, 50px, 60px);
   border: 6px solid #3a3042;
   justify-content: flex-end;
 }

@@ -13,7 +13,15 @@ const getUserInput = () => {
   // step3: send results to the DOM
   updateDOM();
 };
-// perform 4 different mathematical operations
+
+//keyboard shortcut
+document.addEventListener("keydown", function (event) {
+  if (event.key === "F3" || event.keyCode === 114) {
+    getUserInput();
+  }
+});
+
+// perform 4 mathematical operations
 const add = (x, y) => {
   return (sum = x + y);
 };
@@ -58,7 +66,7 @@ const updateDOM = () => {
   document.getElementById("difference").textContent = difference;
 };
 
-// ======================================================================================================================================
+// =================================================================================
 
 // self-challenge
 const buttons = document.querySelectorAll(".button");
