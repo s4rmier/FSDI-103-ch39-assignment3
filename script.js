@@ -68,18 +68,102 @@ const updateDOM = () => {
 
 // =================================================================================
 
-// self-challenge
+// personal-challenge
 const buttons = document.querySelectorAll(".button");
 
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
-    let userInput = Number(event.target.textContent);
-    console.log(userInput, typeof userInput); //for development purposes
+    let userInput = event.target.textContent;
+    // console.log(userInput, typeof userInput); //for development purposes
 
-    isNaN(userInput) ? console.log("Event A") : console.log("Event B"); //for development purposes
+    isNaN(userInput) ? operationsHandler(userInput) : numHandler(userInput);
   });
 });
 
+// Variables for operations event
+let numA = 0;
+let numB = 0;
+let operator;
+let result;
+
+let displayMain = document.getElementById("display-main");
+let displayLog = document.getElementById("result-log");
+
 // event A callback function
+const operationsHandler = (input) => {
+  switch (input) {
+    case "*": {
+      operator = "multiply";
+      numA = displayMain.textContent;
+      displayLog.innerHTML += `<li>${displayMain.textContent} ${input}</li>`;
+      displayMain.textContent = "";
+      break;
+    }
+    case "/": {
+      operator = "divide";
+      numA = displayMain.textContent;
+      displayLog.innerHTML += `<li>${displayMain.textContent} ${input}</li>`;
+      displayMain.textContent = "";
+      break;
+    }
+    case "+": {
+      operator = "add";
+      numA = displayMain.textContent;
+      displayLog.innerHTML += `<li>${displayMain.textContent} ${input}</li>`;
+      displayMain.textContent = "";
+      break;
+    }
+    case "-": {
+      operator = "subtract";
+      numA = displayMain.textContent;
+      displayLog.innerHTML += `<li>${displayMain.textContent} ${input}</li>`;
+      displayMain.textContent = "";
+      break;
+    }
+
+    case "C": {
+      displayLog.innerHTML = "";
+      displayMain.textContent = "";
+      numA = 0;
+      numB = 0;
+      operator = 0;
+      break;
+    }
+
+    default: {
+      numB = displayMain.textContent;
+      displayLog.innerHTML += `<li>${displayMain.textContent}</li>`;
+      switch (operator) {
+        case "multiply": {
+          result = Number(numA) * Number(numB);
+          break;
+        }
+        case "divide": {
+          result = Number(numA) / Number(numB);
+          break;
+        }
+        case "add": {
+          result = Number(numA) + Number(numB);
+          break;
+        }
+        case "subtract": {
+          result = Number(numA) - Number(numB);
+          break;
+        }
+        default: {
+          result = "invalid";
+        }
+      }
+      displayLog.innerHTML += `<li><b>ANS: ${result}</b></li>`;
+      displayMain.textContent = "";
+      break;
+    }
+  }
+  console.log(operator);
+};
 
 // event B callback function
+const numHandler = (input) => {
+  // console.log(input, "Trigger Event B");
+  displayMain.textContent += input;
+};
