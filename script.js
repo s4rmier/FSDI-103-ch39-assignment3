@@ -75,7 +75,6 @@ buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
     let userInput = event.target.textContent;
     // console.log(userInput, typeof userInput); //for development purposes
-
     isNaN(userInput) ? operationsHandler(userInput) : numHandler(userInput);
   });
 });
@@ -156,6 +155,9 @@ const operationsHandler = (input) => {
       }
       displayLog.innerHTML += `<li><b>ANS: ${result}</b></li>`;
       displayMain.textContent = "";
+      numA = 0;
+      numB = 0;
+      operator = "";
       break;
     }
   }
